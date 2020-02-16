@@ -1,0 +1,19 @@
+{
+  "name": "dsgram",
+  "version": "1.0.0",
+  "description": "Instagram clone with Express + Prisma + React + React Native",
+  "repository": "https://github.com/hds2g/dsgram",
+  "author": "DS Hwang <hds2g22@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "babel-node": "^0.0.1-security",
+    "graphql-yoga": "^1.18.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "nodemon": "^2.0.2"
+  },
+  "scripts": {
+    "dev": "nodemon --exec babel-node src/server.js"
+  }
+}

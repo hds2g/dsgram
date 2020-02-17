@@ -1,7 +1,7 @@
 type User {
-  id: ID!    
-  username: String!  
-  email: String!  
+  id: ID! @id @unique
+  username: String! @unique
+  email: String! @unique
   firstName: String @default(value: "")
   lastName: String
   bio: String
@@ -14,7 +14,7 @@ type User {
 }
 
 type Post {
-  id: ID!    
+  id: ID! @id @unique
   location: String
   caption: String!
   user: User!
@@ -24,32 +24,32 @@ type Post {
 }
 
 type Like {
-  id: ID!    
+  id: ID! @id @unique
   user: User!
   post: Post!
 }
 
 type Comment {
-  id: ID!    
+  id: ID! @id @unique
   text: String!
   user: User!
   post: Post!
 }
 
 type File {
-  id: ID!    
+  id: ID! @id @unique
   url: String!
   post: Post!
 }
 
 type Chat {
-  id: ID!    
+  id: ID! @id @unique
   paricipants: [User!]!
   messages: [Message!]!
 }
 
 type Message {
-  id: ID!    
+  id: ID! @id @unique
   test: String!
   from: User! @relation(name: "MessageFrom")
   to : User! @relation(name: "MessageTo")

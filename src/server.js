@@ -1,9 +1,11 @@
-require("dotenv").config();
+import dotenv from "dotenv";
 import { GraphQLServer } from "graphql-yoga";
 import logger from "morgan";
 import schema from "./schema";
 
-const PORT = process.env.PORT || 4000;
+dotenv.config();
+
+const PORT = process.env.PORT;
 
 const server = new GraphQLServer({ schema });
 

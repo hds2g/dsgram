@@ -13,12 +13,5 @@ export default {
       };
       //return prisma.user({ id: user.id }).$fragment(USER_FRAGMENT);
     }
-  },
-
-  User: {
-    fullName: parent => {
-      console.log(parent);
-      return `${parent.firstName} ${parent.lastName}`;
-    }
   }
 };

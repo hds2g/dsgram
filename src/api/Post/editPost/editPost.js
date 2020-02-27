@@ -4,8 +4,8 @@ const DELETE = "DELETE";
 
 export default {
   Mutation: {
-    editPost: async (_, args, { request, isAuthentiated }) => {
-      isAuthentiated(request);
+    editPost: async (_, args, { request,  isAuthenticated }) => {
+       isAuthenticated(request);
       const { id, caption, location, action } = args;
       const { user } = request;
       const post = await prisma.$exists.post({ id, user: { id: user.id } });

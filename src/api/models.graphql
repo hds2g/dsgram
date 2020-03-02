@@ -13,7 +13,7 @@ type User {
   posts: [Post!]!
   likes: [Like!]!
   comments: [Comment!]!
-  Chats: [Chat!]!
+  Rooms: [Room!]!
   loginSecret: String
   createdAt: String!
   updatedAt: String!
@@ -58,9 +58,9 @@ type File {
   updatedAt: String!
 }
 
-type Chat {
+type Room {
   id: ID!
-  paricipants: [User!]!
+  participants: [User!]!
   messages: [Message!]!
   createdAt: String!
   updatedAt: String!
@@ -68,10 +68,10 @@ type Chat {
 
 type Message {
   id: ID!
-  test: String!
+  text: String!
   from: User!
   to: User!
-  Chat: Chat!
+  Room: Room!
   createdAt: String!
   updatedAt: String!
 }

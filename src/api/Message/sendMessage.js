@@ -30,6 +30,7 @@ export default {
       const getTo = room.participants.filter(
         participant => participant.id !== user.id
       )[0];
+
       return prisma.createMessage({
         text: message,
         from: {

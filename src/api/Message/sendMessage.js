@@ -8,6 +8,7 @@ export default {
       const { user } = request;
       const { roomId, message, toId } = args;
       let room;
+
       if (roomId === undefined) {
         if (user.id !== toId) {
           room = await prisma
@@ -21,9 +22,11 @@ export default {
       } else {
         room = await prisma.room({ id: roomId }).$fragment(ROOM_FRAGMENT);
       }
+
       if (!room) {
         throw Error("Room not found");
       }
+
       const getTo = room.participants.filter(
         participant => participant.id !== user.id
       )[0];

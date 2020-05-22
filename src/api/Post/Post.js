@@ -14,28 +14,28 @@ export default {
         AND: [
           {
             user: {
-              id: user.id
-            }
+              id: user.id,
+            },
           },
           {
-            post: { id }
-          }
-        ]
+            post: { id },
+          },
+        ],
       });
     },
-    likeCount: parent =>
+    likeCount: (parent) =>
       prisma
         .likesConnection({
-          where: { post: { id: parent.id } }
+          where: { post: { id: parent.id } },
         })
         .aggregate()
         .count(),
-    commentCount: parent =>
+    commentCount: (parent) =>
       prisma
         .commentsConnection({
-          where: { post: { id: parent.id } }
+          where: { post: { id: parent.id } },
         })
         .aggregate()
-        .count()
-  }
+        .count(),
+  },
 };

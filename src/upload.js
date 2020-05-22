@@ -7,5 +7,6 @@ export const uploadController = (req, res) => {
   const {
     file: { path },
   } = req;
+  //console.log(req);
   res.json({ path });
 };

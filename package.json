@@ -11,7 +11,7 @@
     "@babel/node": "^7.8.4",
     "@babel/preset-env": "^7.8.4",
     "@babel/runtime": "^7.10.1",
-    "aws-sdk": "^2.684.0",
+    "aws-sdk": "^2.814.0",
     "babel-node": "^0.0.1-security",
     "copy": "^0.3.2",
     "dotenv": "^8.2.0",
